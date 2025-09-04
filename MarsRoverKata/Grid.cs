@@ -17,6 +17,11 @@ public class Grid
     {
         return Y;
     }
+    
+    public void InitRoverOnGrid(Rover rover)
+    {
+        roverPositions[rover] = new Position(new Coordinate(0), new Coordinate(0));
+    }
 
     public void SetRoverPosition(Rover rover, Position position)
     {

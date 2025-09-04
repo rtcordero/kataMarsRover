@@ -30,4 +30,14 @@ public class GridTests
         
         Assert.IsTrue(grid.GetRoverPosition(rover).Equals(position));
     }
+    
+    [Test]
+    public void GridCanInitRoverPosition()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid);
+        var initialPosition = new Position(new Coordinate(0), new Coordinate(0));
+        
+        Assert.IsTrue(grid.GetRoverPosition(rover).Equals(initialPosition));
+    }
 }
