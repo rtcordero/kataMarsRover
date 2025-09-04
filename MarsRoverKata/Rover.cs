@@ -28,15 +28,15 @@ public class Rover
     {
         commands.ToList().ForEach(command =>
         {
-            if (command == Command.L)
+            switch (command)
             {
-                compass.RotateLeft();
+                case Command.L:
+                    compass.RotateLeft();
+                    break;
+                case Command.R:
+                    compass.RotateRight();
+                    break;
             }
         });
     }
-}
-
-public enum Command
-{
-    L
 }

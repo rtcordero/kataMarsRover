@@ -35,4 +35,24 @@ public class Compass
             direction = Direction.N;
         }
     }
+
+    public void RotateRight()
+    {
+        if (direction == Direction.N)
+        {
+            direction = Direction.E;
+        }
+        else if (direction == Direction.E)
+        {
+            direction = Direction.S;
+        }
+        else if (direction == Direction.S)
+        {
+            direction = Direction.W;
+        }
+        else if (direction == Direction.W)
+        {
+            direction = Direction.N;
+        }
+    }
 }

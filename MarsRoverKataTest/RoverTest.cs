@@ -66,7 +66,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.L]);
+        rover.execute([Command.R]);
 
         Assert.AreEqual(Direction.E, rover.GetDirection());
     }

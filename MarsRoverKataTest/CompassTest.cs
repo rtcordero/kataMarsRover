@@ -16,4 +16,16 @@ public class CompassTests
 
         Assert.AreEqual(expectedDirection, compass.GetDirection());
     }
+
+    [TestCase(Direction.N, Direction.E)]
+    [TestCase(Direction.E, Direction.S)]
+    [TestCase(Direction.S, Direction.W)]
+    [TestCase(Direction.W, Direction.N)]
+    public void CompassRotateToRight(Direction initialDirection, Direction expectedDirection)
+    {
+        var compass = new Compass(initialDirection);
+        compass.RotateRight();
+
+        Assert.AreEqual(expectedDirection, compass.GetDirection());
+    }
 }
