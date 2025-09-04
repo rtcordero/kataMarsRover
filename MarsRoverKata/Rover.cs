@@ -4,16 +4,16 @@ namespace MarsRover;
 
 public class Rover
 {
-    private readonly Position position;
+    private Grid grid;
 
     public Rover(Grid grid)
     {
-        position = new Position(new Coordinate(0), new Coordinate(0));
-        grid.SetRoverPosition(this, position);
+        this.grid = grid;
+        this.grid.SetRoverPosition(this, new Position(new Coordinate(0), new Coordinate(0)));
     }
 
     public Position GetPosition()
     {
-        return position;
+        return grid.GetRoverPosition(this);
     }
 }
