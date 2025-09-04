@@ -2,20 +2,30 @@ namespace MarsRoverKataTest;
 
 public class Position
 {
-    private readonly int X;
-    private readonly int Y;
+    private Coordinate x;
+    private Coordinate y;
 
-    public Position(int x, int y)
+    public Position(Coordinate coordinateX, Coordinate coordinateY)
     {
-        X = x;
-        Y = y;
+        this.x = coordinateX;
+        this.y = coordinateY;
+    }
+
+    private int GetXValue()
+    {
+        return x.GetValue();
+    }
+
+    private int GetYValue()
+    {
+        return y.GetValue();
     }
 
     public override bool Equals(object? obj)
     {
         if (obj is Position position)
         {
-            return position.X == X && position.Y == Y;
+            return position.GetXValue() == GetXValue() && position.GetYValue() == GetYValue();
         }
 
         return false;

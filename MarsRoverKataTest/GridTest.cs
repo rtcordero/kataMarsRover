@@ -25,7 +25,7 @@ public class GridTests
     {
         var grid = new Grid();
         var rover = new Rover(grid);
-        var position = new Position(5,5);
+        var position = new Position(new Coordinate(5), new Coordinate(5));
         grid.SetRoverPosition(rover, position);
         
         Assert.IsTrue(grid.GetRoverPosition(rover).Equals(position));

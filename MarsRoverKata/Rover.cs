@@ -8,7 +8,7 @@ public class Rover
 
     public Rover(Grid grid)
     {
-        position = new Position(0, 0);
+        position = new Position(new Coordinate(0), new Coordinate(0));
         grid.SetRoverPosition(this, position);
     }
 

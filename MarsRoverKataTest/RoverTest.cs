@@ -14,7 +14,7 @@ public class RoverTests
     {
         var grid = new Grid();
         var rover = new Rover(grid);
-        var initialPosition = new Position(0,0);
+        var initialPosition = new Position(new Coordinate(0), new Coordinate(0));
         
         Assert.AreEqual(initialPosition, rover.GetPosition());
     }
@@ -24,7 +24,7 @@ public class RoverTests
     {
         var grid = new Grid();
         var rover = new Rover(grid);
-        var initialPosition = new Position(0,0);
+        var initialPosition = new Position(new Coordinate(0), new Coordinate(0));
         
         Assert.IsTrue(grid.GetRoverPosition(rover).Equals(initialPosition));
     }
