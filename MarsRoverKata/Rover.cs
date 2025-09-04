@@ -18,9 +18,25 @@ public class Rover
     {
         return grid.GetRoverPosition(this);
     }
-    
+
     public Direction GetDirection()
     {
         return compass.GetDirection();
     }
+
+    public void execute(Command[] commands)
+    {
+        commands.ToList().ForEach(command =>
+        {
+            if (command == Command.L)
+            {
+                compass.RotateLeft();
+            }
+        });
+    }
+}
+
+public enum Command
+{
+    L
 }

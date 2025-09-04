@@ -24,7 +24,7 @@ public class GridTests
     public void GridCanSetRoverPosition()
     {
         var grid = new Grid();
-        var rover = new Rover(grid, new Compass());
+        var rover = new Rover(grid, new Compass(Direction.N));
         var position = new Position(new Coordinate(5), new Coordinate(5));
         grid.SetRoverPosition(rover, position);
 
@@ -35,7 +35,7 @@ public class GridTests
     public void GridCanInitRoverPosition()
     {
         var grid = new Grid();
-        var rover = new Rover(grid, new Compass());
+        var rover = new Rover(grid, new Compass(Direction.N));
         var initialPosition = new Position(new Coordinate(0), new Coordinate(0));
 
         Assert.IsTrue(grid.GetRoverPosition(rover).Equals(initialPosition));
