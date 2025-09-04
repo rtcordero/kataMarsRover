@@ -70,4 +70,26 @@ public class RoverTests
 
         Assert.AreEqual(Direction.E, rover.GetDirection());
     }
+
+    [Test]
+    public void RoverCanRotateToRightTwice()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid, new Compass(Direction.N));
+
+        rover.execute([Command.R, Command.R]);
+
+        Assert.AreEqual(Direction.S, rover.GetDirection());
+    }
+    
+    [Test]
+    public void RoverCanMoveToFront()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid, new Compass(Direction.N));
+
+        rover.execute([Command.M]);
+
+        Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(1)), rover.GetPosition());
+    }
 }
