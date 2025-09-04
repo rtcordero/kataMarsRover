@@ -21,6 +21,16 @@ public class Position
         return y.GetValue();
     }
 
+    public void IncreaseX()
+    {
+        x = new Coordinate(GetXValue() + 1);
+    }
+
+    public void IncreaseY()
+    {
+        y = new Coordinate(GetYValue() + 1);
+    }
+
     public override bool Equals(object? obj)
     {
         if (obj is Position position)

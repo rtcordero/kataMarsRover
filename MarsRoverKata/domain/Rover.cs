@@ -31,12 +31,31 @@ public class Rover
             switch (command)
             {
                 case Command.L:
-                    compass.RotateLeft();
+                    rotateLeft();
                     break;
                 case Command.R:
-                    compass.RotateRight();
+                    rotateRight();
+                    break;
+                case Command.M:
+                    move();
                     break;
             }
         });
+    }
+
+    private void move()
+    {
+
+        grid.increaseY(this);
+    }
+
+    private void rotateRight()
+    {
+        compass.RotateRight();
+    }
+
+    private void rotateLeft()
+    {
+        compass.RotateLeft();
     }
 }

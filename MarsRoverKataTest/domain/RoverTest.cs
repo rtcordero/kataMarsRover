@@ -83,7 +83,7 @@ public class RoverTests
     }
     
     [Test]
-    public void RoverCanMoveToFront()
+    public void RoverCanMoveToFrontWhenStartOnNorth()
     {
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
@@ -91,5 +91,16 @@ public class RoverTests
         rover.execute([Command.M]);
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(1)), rover.GetPosition());
+    }
+    
+    [Test]
+    public void RoverCanMoveToFrontWhenStartOnEast()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid, new Compass(Direction.E));
+
+        rover.execute([Command.M]);
+
+        Assert.AreEqual(new Position(new Coordinate(1), new Coordinate(0)), rover.GetPosition());
     }
 }
