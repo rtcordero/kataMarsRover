@@ -1,0 +1,65 @@
+## Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+## Rider
+.idea/
+*.sln.iml
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Visual Studio Code
+.vscode/
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.VisualState.xml
+*.coverage
+*.coveragexml
+
+## Packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.vsix
+
+## Logs
+*.log
+
+## Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+Thumbs.db
+
+## Resharper / Rider
+_ReSharper*/
+*.DotSettings.user
+*.DotSettings
+
+## NuGet
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Azure
+*.azurePubxml
+*.publishproj
+*.pubxml
+*.publishsettings
+
+## Other
+*.dbmdl
+*.jfm
+*.pdb
