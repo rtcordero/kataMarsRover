@@ -54,16 +54,16 @@ public class Rover
         switch (compass.GetDirection())
         {
             case Direction.N:
-                grid.increaseY(this);
+                grid.IncreaseY(this);
                 break;
             case Direction.E:
-                grid.increaseX(this);
+                grid.IncreaseX(this);
                 break;
             case Direction.S:
-                grid.decreaseY(this);
+                grid.DecreaseY(this);
                 break;
             case Direction.W:
-                grid.decreaseX(this);
+                grid.DecreaseX(this);
                 break;
         }
     }

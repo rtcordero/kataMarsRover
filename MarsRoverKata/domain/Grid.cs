@@ -33,22 +33,22 @@ public class Grid
         return roverPositions[rover];
     }
 
-    public void increaseX(Rover rover)
+    public void IncreaseX(Rover rover)
     {
         roverPositions[rover].IncreaseX();
     }
 
-    public void decreaseX(Rover rover)
+    public void DecreaseX(Rover rover)
     {
         roverPositions[rover].DecreaseX();
     }
 
-    public void increaseY(Rover rover)
+    public void IncreaseY(Rover rover)
     {
         roverPositions[rover].IncreaseY();
     }
 
-    public void decreaseY(Rover rover)
+    public void DecreaseY(Rover rover)
     {
         roverPositions[rover].DecreaseY();
     }
