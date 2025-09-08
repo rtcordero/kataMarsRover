@@ -45,7 +45,6 @@ public class Rover
 
     private void move()
     {
-
         grid.increaseY(this);
     }
 
