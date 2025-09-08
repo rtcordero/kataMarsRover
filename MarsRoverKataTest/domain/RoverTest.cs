@@ -138,4 +138,7 @@ public class RoverTests
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
         Assert.AreEqual(Direction.N, rover.GetDirection());
     }
+    
+    // TODO Add test to check that rover does not move out of the grid
+    // TODO Add test when there are obstacles on the grid
 }
