@@ -45,7 +45,24 @@ public class Rover
 
     private void move()
     {
-        grid.increaseY(this);
+        switch (compass.GetDirection())
+        {
+            case Direction.N:
+                grid.increaseY(this);
+                break;
+            case Direction.E:
+                grid.increaseX(this);
+                break;
+            case Direction.S:
+                // To be implemented
+                break;
+            case Direction.W:
+                // To be implemented
+                break;
+        }
+        {
+            
+        }
     }
 
     private void rotateRight()
