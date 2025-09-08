@@ -125,4 +125,17 @@ public class RoverTests
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
     }
+    
+    [Test]
+    public void RoverReportFinalPositionAfterFinishingCommands()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid, new Compass(Direction.N));
+
+        var result = rover.execute([Command.M, Command.R, Command.M, Command.R, Command.M, Command.R, Command.M, Command.R]);
+
+        Assert.AreEqual(result, "0:0:N");
+        Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
+        Assert.AreEqual(Direction.N, rover.GetDirection());
+    }
 }

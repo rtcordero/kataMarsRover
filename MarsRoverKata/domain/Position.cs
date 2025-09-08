@@ -11,12 +11,12 @@ public class Position
         this.y = coordinateY;
     }
 
-    private int GetXValue()
+    public int GetXValue()
     {
         return x.GetValue();
     }
 
-    private int GetYValue()
+    public int GetYValue()
     {
         return y.GetValue();
     }

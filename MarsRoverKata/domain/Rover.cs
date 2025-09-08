@@ -24,7 +24,7 @@ public class Rover
         return compass.GetDirection();
     }
 
-    public void execute(Command[] commands)
+    public String execute(Command[] commands)
     {
         commands.ToList().ForEach(command =>
         {
@@ -41,6 +41,12 @@ public class Rover
                     break;
             }
         });
+        return getFinishExecutingResponse();
+    }
+
+    private string getFinishExecutingResponse()
+    {
+        return $"{GetPosition().GetXValue()}:{GetPosition().GetYValue()}:{GetDirection()}";
     }
 
     private void move()
