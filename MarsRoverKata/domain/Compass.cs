@@ -38,21 +38,20 @@ public class Compass
 
     public void RotateRight()
     {
-        if (direction == Direction.N)
+        switch (direction)
         {
-            direction = Direction.E;
-        }
-        else if (direction == Direction.E)
-        {
-            direction = Direction.S;
-        }
-        else if (direction == Direction.S)
-        {
-            direction = Direction.W;
-        }
-        else if (direction == Direction.W)
-        {
-            direction = Direction.N;
+            case Direction.N:
+                direction = Direction.E;
+                break;
+            case Direction.E:
+                direction = Direction.S;
+                break;
+            case Direction.S:
+                direction = Direction.W;
+                break;
+            case Direction.W:
+                direction = Direction.N;
+                break;
         }
     }
 }
