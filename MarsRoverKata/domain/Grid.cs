@@ -38,6 +38,11 @@ public class Grid
         roverPositions[rover].IncreaseX();
     }
 
+    public void decreaseX(Rover rover)
+    {
+        roverPositions[rover].DecreaseX();
+    }
+
     public void increaseY(Rover rover)
     {
         roverPositions[rover].IncreaseY();

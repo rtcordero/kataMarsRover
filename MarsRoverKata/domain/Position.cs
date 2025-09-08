@@ -26,6 +26,11 @@ public class Position
         x = new Coordinate(GetXValue() + 1);
     }
 
+    public void DecreaseX()
+    {
+        x = new Coordinate(GetXValue() - 1);
+    }
+
     public void IncreaseY()
     {
         y = new Coordinate(GetYValue() + 1);

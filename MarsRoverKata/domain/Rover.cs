@@ -57,7 +57,7 @@ public class Rover
                 // To be implemented
                 break;
             case Direction.W:
-                // To be implemented
+                grid.decreaseX(this);
                 break;
         }
         {
