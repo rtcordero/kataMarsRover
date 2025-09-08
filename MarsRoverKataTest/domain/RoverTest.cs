@@ -44,7 +44,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
         
-        rover.execute([Command.L]);
+        rover.Execute([Command.L]);
         
         Assert.AreEqual(Direction.W, rover.GetDirection());
     }
@@ -55,7 +55,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.L, Command.L]);
+        rover.Execute([Command.L, Command.L]);
 
         Assert.AreEqual(Direction.S, rover.GetDirection());
     }
@@ -66,7 +66,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.R]);
+        rover.Execute([Command.R]);
 
         Assert.AreEqual(Direction.E, rover.GetDirection());
     }
@@ -77,7 +77,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.R, Command.R]);
+        rover.Execute([Command.R, Command.R]);
 
         Assert.AreEqual(Direction.S, rover.GetDirection());
     }
@@ -88,7 +88,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.M]);
+        rover.Execute([Command.M]);
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(1)), rover.GetPosition());
     }
@@ -99,7 +99,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.E));
 
-        rover.execute([Command.M]);
+        rover.Execute([Command.M]);
 
         Assert.AreEqual(new Position(new Coordinate(1), new Coordinate(0)), rover.GetPosition());
     }
@@ -110,7 +110,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.E));
 
-        rover.execute([Command.M, Command.L, Command.L, Command.M]);
+        rover.Execute([Command.M, Command.L, Command.L, Command.M]);
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
     }
@@ -121,7 +121,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        rover.execute([Command.M, Command.L, Command.L, Command.M]);
+        rover.Execute([Command.M, Command.L, Command.L, Command.M]);
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
     }
@@ -132,7 +132,7 @@ public class RoverTests
         var grid = new Grid();
         var rover = new Rover(grid, new Compass(Direction.N));
 
-        var result = rover.execute([Command.M, Command.R, Command.M, Command.R, Command.M, Command.R, Command.M, Command.R]);
+        var result = rover.Execute([Command.M, Command.R, Command.M, Command.R, Command.M, Command.R, Command.M, Command.R]);
 
         Assert.AreEqual(result, "0:0:N");
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());

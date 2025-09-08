@@ -24,32 +24,32 @@ public class Rover
         return compass.GetDirection();
     }
 
-    public String execute(Command[] commands)
+    public String Execute(Command[] commands)
     {
         commands.ToList().ForEach(command =>
         {
             switch (command)
             {
                 case Command.L:
-                    rotateLeft();
+                    RotateLeft();
                     break;
                 case Command.R:
-                    rotateRight();
+                    RotateRight();
                     break;
                 case Command.M:
-                    move();
+                    Move();
                     break;
             }
         });
-        return getFinishExecutingResponse();
+        return GetFinishExecutingResponse();
     }
 
-    private string getFinishExecutingResponse()
+    private string GetFinishExecutingResponse()
     {
         return $"{GetPosition().GetXValue()}:{GetPosition().GetYValue()}:{GetDirection()}";
     }
 
-    private void move()
+    private void Move()
     {
         switch (compass.GetDirection())
         {
@@ -66,17 +66,14 @@ public class Rover
                 grid.decreaseX(this);
                 break;
         }
-        {
-            
-        }
     }
 
-    private void rotateRight()
+    private void RotateRight()
     {
         compass.RotateRight();
     }
 
-    private void rotateLeft()
+    private void RotateLeft()
     {
         compass.RotateLeft();
     }
