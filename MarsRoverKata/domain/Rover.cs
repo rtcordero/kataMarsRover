@@ -54,7 +54,7 @@ public class Rover
                 grid.increaseX(this);
                 break;
             case Direction.S:
-                // To be implemented
+                grid.decreaseY(this);
                 break;
             case Direction.W:
                 grid.decreaseX(this);

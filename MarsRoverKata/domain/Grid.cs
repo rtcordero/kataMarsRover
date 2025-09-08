@@ -47,4 +47,9 @@ public class Grid
     {
         roverPositions[rover].IncreaseY();
     }
+
+    public void decreaseY(Rover rover)
+    {
+        roverPositions[rover].DecreaseY();
+    }
 }

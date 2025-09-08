@@ -114,4 +114,15 @@ public class RoverTests
 
         Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
     }
+    
+    [Test]
+    public void RoverCanMoveToFrontWhenDirectionIsSouth()
+    {
+        var grid = new Grid();
+        var rover = new Rover(grid, new Compass(Direction.N));
+
+        rover.execute([Command.M, Command.L, Command.L, Command.M]);
+
+        Assert.AreEqual(new Position(new Coordinate(0), new Coordinate(0)), rover.GetPosition());
+    }
 }

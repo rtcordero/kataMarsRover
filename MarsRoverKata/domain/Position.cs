@@ -36,6 +36,11 @@ public class Position
         y = new Coordinate(GetYValue() + 1);
     }
 
+    public void DecreaseY()
+    {
+        y = new Coordinate(GetYValue() - 1);
+    }
+
     public override bool Equals(object? obj)
     {
         if (obj is Position position)
